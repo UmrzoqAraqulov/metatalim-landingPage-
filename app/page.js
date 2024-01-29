@@ -9,9 +9,9 @@ export default function Home() {
         }}
         className="w-full h-screen bg flex items-center justify-center hero"
       >
-        <h1 className="text-white font-bold -translate-y-4 text-6xl text-center max-md:text-4xl max-sm:text-3xl px-3">
+        <h1>
           {"Turk tilini qisqa vaqt ichida o'rganing"}, <br /> B2 darajali
-          {"sertificateni qo'lga kiriting !"}
+          {" sertificateni qo'lga kiriting !"}
         </h1>
         <div className="animation__button">
           <a href="#turk-language">
@@ -42,14 +42,14 @@ export default function Home() {
           </p>
           <p>
             {
-              "SMM - marketingdagi samarali qurollardan biri hisoblanadi. Sababi O'zbekistonda"
+              "SMM - marketingdagi samarali qurollardan biri hisoblanadi. Sababi O'zbekistonda "
             }
             <span className="font-bold">6 mln</span> ga yaqin inson ijtimoiy
             tarmoqlardan faol foydalanadi.
           </p>
           <p className="pt-5">
             Shu sohada <span className="font-bold">mutaxassis</span>
-            {"bo'ldingiz"} degani - hamma
+            {" bo'ldingiz"} degani - hamma
             <span className="font-bold"> biznesga kerakli kadrsiz</span> degani.
           </p>
         </div>
@@ -57,7 +57,7 @@ export default function Home() {
       <section className="container flex flex-col items-center gap-5">
         <h2 className="my-4">
           Sizga <span>kerakli</span> {"qo'shimcha"} darslarni
-          <span>bepul </span>
+          <span> bepul </span>
           taqdim qilamiz
         </h2>
         <div className="gift-card">
