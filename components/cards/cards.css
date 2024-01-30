@@ -1,0 +1,23 @@
+.course-box {
+  width: 100%;
+  border: 1.5px solid rgba(255, 0, 0, 0.819);
+  padding: 30px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: inset 0px 0px 10px rgba(255, 0, 0, 0.2);
+  transition: 0.3s;
+}
+
+.course-box:hover {
+  box-shadow: 0px 0px 10px rgba(255, 0, 0, 0.5);
+}
+
+@media (max-width: 700px) {
+  .course-box {
+    padding: 15px 10px;
+    text-align: center;
+    gap: 4px;
+  }
+}

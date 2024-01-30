@@ -1,0 +1,15 @@
+.register-btn {
+  padding: 10px 30px;
+  border-radius: 20px;
+  background: red;
+  color: white;
+  border: 1.5px solid red;
+  transition: 0.3s;
+  font-weight: bold;
+}
+
+.register-btn:hover {
+  color: red;
+  background: white;
+  box-shadow: inset 0px 0px 10px rgba(255, 0, 0, 0.516);
+}
