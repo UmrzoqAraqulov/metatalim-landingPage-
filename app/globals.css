@@ -176,10 +176,6 @@ span {
   }
 }
 
-img{
-  object-fit: cover;
-}
-
 .teacher-info{
   position: relative;
   padding: 20px 0px;

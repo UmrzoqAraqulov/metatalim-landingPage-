@@ -8,19 +8,12 @@ import Image from "next/image";
 import "swiper/css";
 
 const CustomCarusel = () => {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-  };
   return (
     <Swiper
       slidesPerView={1}
       navigation={true}
       autoplay={{
-        delay: 500,
+        delay: 1000,
         disableOnInteraction: false,
       }}
       modules={[Autoplay]}

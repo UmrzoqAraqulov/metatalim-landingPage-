@@ -1,6 +1,40 @@
 import CustomAccordion from "@/components/accordion/customAccordion";
+import LearnCard from "@/components/cards/learn-card";
+import ResultCard from "@/components/cards/result-card";
 import CustomCarusel from "@/components/customCarusel/customCarusel";
 import Image from "next/image";
+
+const learnInfo = [
+  {
+    title: "Speaking ",
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio sequi recusandae minus explicabo beatae! Numquam a temporibus iste. Veniam, odit!",
+  },
+  {
+    title: " Listening ",
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio sequi recusandae minus explicabo beatae! Numquam a temporibus iste. Veniam, odit!",
+  },
+  {
+    title: " Reading ",
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio sequi recusandae minus explicabo beatae! Numquam a temporibus iste. Veniam, odit!",
+  },
+  {
+    title: " Writing",
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio sequi recusandae minus explicabo beatae! Numquam a temporibus iste. Veniam, odit!",
+  },
+  {
+    title: "A1, A2, B1, B2, C1",
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio sequi recusandae minus explicabo beatae! Numquam a temporibus iste. Veniam, odit!",
+  },
+];
+
+const resultInfo = [
+  "B2 yoki C1 sertifikat",
+  "Turk tilidan gaplasha olasiz",
+  "B2 yoki C1 sertifikat",
+  "Turk tilidan gaplasha olasiz",
+  "B2 yoki C1 sertifikat",
+  "Turk tilidan gaplasha olasiz",
+];
 
 export default function Home() {
   return (
@@ -79,12 +113,12 @@ export default function Home() {
       </section>
 
       {/* Kursda davomida barcha narsalarni o’rganasiz */}
-      <section className="container">
-        <h2 className="w-[70%] m-auto max-md:w-full">
-          Kursda davomida barcha narsalarni {"o’rganasiz"}
-        </h2>
-        <div className="py-4">
-          <CustomAccordion />
+      <section className="container py-8">
+        <h2>Kursda davomida barcha narsalarni {"o’rganasiz"}</h2>
+        <div className="flex flex-wrap justify-between gap-5 py-3">
+          {learnInfo.map((el, id) => (
+            <LearnCard key={id} {...el} />
+          ))}
         </div>
       </section>
 
@@ -144,6 +178,39 @@ export default function Home() {
               style={{ width: "100%", height: "100%" }}
             />
           </div>
+        </div>
+      </section>
+
+      {/* Kurs dasturi */}
+      <section className="container">
+        <h2 className="w-[70%] m-auto max-md:w-full">Kurs Dasturi</h2>
+        <div className="py-4">
+          <CustomAccordion />
+        </div>
+      </section>
+
+      {/* Kursdan lavhalar */}
+      <section className="container py-8">
+        <h2>Kursdan lavhalar qiziqmi? Marhamat:</h2>
+        <div className="w-[100%] h-[500px] py-4 max-md:h-[350px] max-sm:h-[300px]">
+          <iframe
+            src="https://www.youtube.com/embed/8612RfUoDQ4?si=ob3OWqTR2Hr8F_E4"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+            className="w-full h-full rounded-sm"
+          ></iframe>
+        </div>
+      </section>
+
+      {/* Kursni bitirib, qanday natijaga erishasiz */}
+      <section className="container">
+        <h2>Kursni bitirib, qanday natijaga erishasiz?</h2>
+        <div className="flex flex-wrap justify-between gap-8 py-8">
+          {resultInfo.map((el, id) => (
+            <ResultCard key={id} title={el} />
+          ))}
         </div>
       </section>
 
