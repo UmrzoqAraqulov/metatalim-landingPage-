@@ -1,0 +1,9 @@
+.text-foreground{
+  color: white !important;
+  font-size: 30px !important;
+}
+@media (max-width:700px){
+  .text-foreground{
+    font-size: 22px !important;
+  }
+}

@@ -1,3 +1,5 @@
+import CustomAccordion from "@/components/accordion/customAccordion";
+import CustomCarusel from "@/components/customCarusel/customCarusel";
 import Image from "next/image";
 
 export default function Home() {
@@ -24,36 +26,127 @@ export default function Home() {
           </a>
         </div>
       </section>
-      {/* <section className="w-full">
-        <marquee behavior="" direction="">
-          <ul className="flex gap-3">
-            <li>Qisqa muddatda kasb o'rganing</li>
-            <li>Qisqa muddatda kasb o'rganing</li>
-            <li>Qisqa muddatda kasb o'rganing</li>
-          </ul>
-        </marquee>
-      </section> */}
+
+      {/* nega turk tili */}
       <section className="container" id="turk-language">
         <div className="my-14 p-10 bg-[#8e8e8e3e] max-md:p-4">
           <h2>{"Nega Turk tilini o'rganish kerak?"}</h2>
-          <p className="py-5">
-            {`Istalgan biznes ko'proq savdo qilishni xohlaydi. Savdoni oshirish`}
-            <span className="font-bold"> {"marketingga bog'liq."}</span>
-          </p>
-          <p>
-            {
-              "SMM - marketingdagi samarali qurollardan biri hisoblanadi. Sababi O'zbekistonda "
-            }
-            <span className="font-bold">6 mln</span> ga yaqin inson ijtimoiy
-            tarmoqlardan faol foydalanadi.
-          </p>
-          <p className="pt-5">
-            Shu sohada <span className="font-bold">mutaxassis</span>
-            {" bo'ldingiz"} degani - hamma
-            <span className="font-bold"> biznesga kerakli kadrsiz</span> degani.
-          </p>
+          <div className="card-status py-2">
+            <Image
+              src="/check-icon.svg"
+              alt="check icon"
+              width={20}
+              height={20}
+            />
+            <p>
+              Chet el davlatlarida{" "}
+              <span className="font-bold"> Magistraturaga </span> kirish uchun
+            </p>
+          </div>
+          <div className="card-status py-2">
+            <Image
+              src="/check-icon.svg"
+              alt="check icon"
+              width={20}
+              height={20}
+            />
+            <p>
+              Chet el davlatlarida{" "}
+              <span className="font-bold"> Doktaranturaga </span> kirish uchun
+            </p>
+          </div>
+          <div className="card-status py-2">
+            <Image
+              src="/check-icon.svg"
+              alt="check icon"
+              width={20}
+              height={20}
+            />
+            <p>
+              Turkiy davlatlarda rohatlanib{" "}
+              <span className="font-bold">sayohat</span> qilish
+            </p>
+          </div>
         </div>
       </section>
+
+      {/*Kurs haqida o’quvchilarimizning fikri */}
+      <section className="container">
+        <h2>Kurs haqida {"o'quvchilarimizning"} fikri</h2>
+        <div className="py-5">
+          <CustomCarusel />
+        </div>
+      </section>
+
+      {/* Kursda davomida barcha narsalarni o’rganasiz */}
+      <section className="container">
+        <h2 className="w-[70%] m-auto max-md:w-full">
+          Kursda davomida barcha narsalarni {"o’rganasiz"}
+        </h2>
+        <div className="py-4">
+          <CustomAccordion />
+        </div>
+      </section>
+
+      {/* Kurs afzalliklari  */}
+      <section className="container">
+        <h2 className="py-5">Kurs afzalliklari:</h2>
+        <div className="flex flex-col gap-5 items-center">
+          <div className="course-box">
+            <h3>Sifatli videolar</h3>
+            <p>
+              {
+                "Qo'lay tushunarli har xil formatdagi siz xohlagandek ko'rinishdagi videolar!"
+              }
+            </p>
+          </div>
+          <div className="course-box">
+            <h3>Erkin vaqt va grafikda {"ta'lim"} olish</h3>
+            <p>
+              {
+                "Kurs onlayn tarzda bo'lgani uchun siz istalgan vaqt va manzilda, o'zingizga qulay sharoitni tanlagan holda ta'lim olishingiz mumkin."
+              }
+            </p>
+          </div>
+
+          <div className="course-box">
+            <h3>Erkin vaqt va grafikda {"ta'lim"} olish</h3>
+            <p>
+              {
+                "Kurs onlayn tarzda bo'lgani uchun siz istalgan vaqt va manzilda, o'zingizga qulay sharoitni tanlagan holda ta'lim olishingiz mumkin."
+              }
+            </p>
+          </div>
+          <button className="register-btn">
+            Maxsus chegirmaga ega {"bo'ling"}
+          </button>
+        </div>
+      </section>
+
+      {/* Kurs Mentori */}
+      <section className="py-5 container">
+        <h2>Kurs Mentori:</h2>
+        <div className="flex items-center justify-between my-6 max-sm:my-2 flex-wrap gap-3">
+          <div className="w-[45%] max-md:w-[100%]">
+            <h3 className="text-red-500">Kamola Ergashova</h3>
+            <p className="py-4">Turk tili Katta {"o'qituvchisi"}</p>
+            <p className="teacher-info">
+              <span>500 ga yaqin</span> {"o'quvchilarga"} ushbu sohadan{" "}
+              {"ta'lim"} berib kelayotgan mentor.
+            </p>
+          </div>
+          <div className="w-[45%] max-md:w-[80%] max-md:mx-auto max-sm:w-[100%]">
+            <Image
+              src="/mentor.svg"
+              alt="mentor img"
+              width="100"
+              height="100"
+              style={{ width: "100%", height: "100%" }}
+            />
+          </div>
+        </div>
+      </section>
+
       <section className="container flex flex-col items-center gap-5">
         <h2 className="my-4">
           Sizga <span>kerakli</span> {"qo'shimcha"} darslarni
@@ -71,7 +164,7 @@ export default function Home() {
         </div>
         <div className="gift-card">
           <Image src="/gift-icon.svg" alt="gift icon" width={50} height={50} />
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col">
             <h3>{`"Kompyuter savodxonligi"`} kursi</h3>
             <p>
               <del>1,000,000 {"so'm"} </del> Bepul
@@ -80,7 +173,7 @@ export default function Home() {
         </div>
         <div className="gift-card">
           <Image src="/gift-icon.svg" alt="gift icon" width={50} height={50} />
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col">
             <h3>Stories bilan ishlash {"bo'yicha"} minikurs</h3>
             <p>
               <del>300,000 {"so'm"} </del> Bepul
@@ -89,7 +182,7 @@ export default function Home() {
         </div>
         <div className="gift-card">
           <Image src="/gift-icon.svg" alt="gift icon" width={50} height={50} />
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col">
             <h3>Maxsus premium darslar</h3>
             <p>
               <del>1,000,000 {"so'm"} </del> Bepul
@@ -100,39 +193,138 @@ export default function Home() {
           Maxsus chegirmaga ega {"bo'ling"}
         </button>
       </section>
-      <section className="container">
-        <h2 className="py-5">Kurs afzalliklari:</h2>
-        <div className="flex flex-col gap-5 items-center">
-          <div className="course-box">
-            <h3>Erkin vaqt va grafikda {"ta'lim"} olish</h3>
-            <p>
-              {
-                "Kurs onlayn tarzda bo'lgani uchun siz istalgan vaqt va manzilda, o'zingizga qulay sharoitni tanlagan holda ta'lim olishingiz mumkin."
-              }
-            </p>
+
+      <section className="container py-8">
+        <h2 className="py-8">
+          Kursni xarid qilganingizda ushbu
+          <span>imkoniyatlarni barchasiga</span> ega {"bo'lasiz"}
+        </h2>
+        <div className="flex flex-wrap justify-center gap-5">
+          <div className="card-course w-[45%] max-md:w-full">
+            <h2>Basic</h2>
+            <div className="flex flex-col gap-3">
+              <div className="flex gap-2 items-center">
+                <Image
+                  src="/check-icon.svg"
+                  alt="check icon"
+                  width={20}
+                  height={20}
+                />
+                <p>
+                  1 yil saqlanib qoluvchi {"o'quv"} materiallari va video
+                  darsliklari
+                </p>
+              </div>
+              <div className="flex gap-2 items-center">
+                <Image
+                  src="/check-icon.svg"
+                  alt="check icon"
+                  width={20}
+                  height={20}
+                />
+                <p>Barcha taqdimotlarning pdf fayllari</p>
+              </div>
+              <div className="flex gap-2 items-center">
+                <Image
+                  src="/check-icon.svg"
+                  alt="check icon"
+                  width={20}
+                  height={20}
+                />
+                <p>Kursni muvaffaqiyatli bitirganini bildiruvchi sertifikat</p>
+              </div>
+            </div>
+            <div className="font-bold text-3xl max-sm:text-xl text-center">
+              3,5 mln {"so'm"}
+            </div>
+            <button className="register-btn">
+              Maxsus chegirmaga ega {"bo'ling"}
+            </button>
           </div>
-          <div className="course-box">
-            <h3>Erkin vaqt va grafikda {"ta'lim"} olish</h3>
-            <p>
-              {
-                "Kurs onlayn tarzda bo'lgani uchun siz istalgan vaqt va manzilda, o'zingizga qulay sharoitni tanlagan holda ta'lim olishingiz mumkin."
-              }
-            </p>
+          <div className="card-course w-[45%] max-md:w-full">
+            <h2>Standart</h2>
+            <div className="flex flex-col gap-3">
+              <div className="flex gap-2 items-center">
+                <Image
+                  src="/check-icon.svg"
+                  alt="check icon"
+                  width={20}
+                  height={20}
+                />
+                <p>
+                  1 yil saqlanib qoluvchi {"o'quv"} materiallari va video
+                  darsliklari
+                </p>
+              </div>
+              <div className="flex gap-2 items-center">
+                <Image
+                  src="/check-icon.svg"
+                  alt="check icon"
+                  width={20}
+                  height={20}
+                />
+                <p>Barcha taqdimotlarning pdf fayllari</p>
+              </div>
+              <div className="flex gap-2 items-center">
+                <Image
+                  src="/check-icon.svg"
+                  alt="check icon"
+                  width={20}
+                  height={20}
+                />
+                <p>Kursni muvaffaqiyatli bitirganini bildiruvchi sertifikat</p>
+              </div>
+            </div>
+            <div className="font-bold text-3xl max-sm:text-xl text-center">
+              3,5 mln {"so'm"}
+            </div>
+            <button className="register-btn">
+              Maxsus chegirmaga ega {"bo'ling"}
+            </button>
           </div>
-          <div className="course-box">
-            <h3>Erkin vaqt va grafikda {"ta'lim"} olish</h3>
-            <p>
-              {
-                "Kurs onlayn tarzda bo'lgani uchun siz istalgan vaqt va manzilda, o'zingizga qulay sharoitni tanlagan holda ta'lim olishingiz mumkin."
-              }
-            </p>
+          <div className="card-course w-[45%] max-md:w-full">
+            <h2>Premum</h2>
+            <div className="flex flex-col gap-3">
+              <div className="flex gap-2 items-center">
+                <Image
+                  src="/check-icon.svg"
+                  alt="check icon"
+                  width={20}
+                  height={20}
+                />
+                <p>
+                  1 yil saqlanib qoluvchi {"o'quv"} materiallari va video
+                  darsliklari
+                </p>
+              </div>
+              <div className="flex gap-2 items-center">
+                <Image
+                  src="/check-icon.svg"
+                  alt="check icon"
+                  width={20}
+                  height={20}
+                />
+                <p>Barcha taqdimotlarning pdf fayllari</p>
+              </div>
+              <div className="flex gap-2 items-center">
+                <Image
+                  src="/check-icon.svg"
+                  alt="check icon"
+                  width={20}
+                  height={20}
+                />
+                <p>Kursni muvaffaqiyatli bitirganini bildiruvchi sertifikat</p>
+              </div>
+            </div>
+            <div className="font-bold text-3xl max-sm:text-xl text-center">
+              3,5 mln {"so'm"}
+            </div>
+            <button className="register-btn">
+              Maxsus chegirmaga ega {"bo'ling"}
+            </button>
           </div>
-          <button className="register-btn">
-            Maxsus chegirmaga ega {"bo'ling"}
-          </button>
         </div>
       </section>
-      <section className="container"></section>
     </main>
   );
 }

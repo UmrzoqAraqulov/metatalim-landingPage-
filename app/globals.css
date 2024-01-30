@@ -39,7 +39,7 @@
   }
 }
 
-h1{
+h1 {
   font-size: 54px;
   font-weight: bold;
   color: white;
@@ -51,6 +51,8 @@ h2 {
   font-size: 40px;
   font-weight: bolder;
   text-align: center;
+  line-height: 44px;
+  padding-bottom: 12px;
 }
 
 h3 {
@@ -62,15 +64,18 @@ h3 {
   .container {
     width: 90%;
   }
-  h1{
+  h1 {
     font-size: 30px;
     line-height: 40px;
   }
   h2 {
     font-size: 26px;
+    line-height: 30px;
+    padding-bottom: 6px;
   }
   h3 {
     font-size: 18px;
+    line-height: 20px;
   }
 }
 
@@ -87,7 +92,7 @@ h3 {
   transition: 0.3s;
 }
 
-.course-box:hover{
+.course-box:hover {
   box-shadow: 0px 0px 10px rgba(255, 0, 0, 0.5);
 }
 
@@ -141,9 +146,51 @@ span {
     height: 30px !important;
   }
   .gift-card__info {
-    gap: 4px;
+    gap: 2px;
   }
   .register-btn {
-  padding: 8px 15px;
+    padding: 8px 15px;
+  }
 }
+
+.card-course {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 50px 30px;
+  border: 2px solid red;
+  box-shadow: 0px 0px 10px rgba(128, 128, 128, 0.5);
+  border-radius: 5px;
+}
+
+.card-status {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+@media (max-width: 700px) {
+  .card-course {
+    padding: 30px 15px;
+    gap: 20px;
+  }
+}
+
+img{
+  object-fit: cover;
+}
+
+.teacher-info{
+  position: relative;
+  padding: 20px 0px;
+}
+
+.teacher-info::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 5px;
+  background: gray;
 }
